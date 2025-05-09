@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-feature android:name="android.hardware.type.watch" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <application
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MedicineReminder">
+        <activity
+            android:name=".activity.Medicines.WearMedicineReminderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.Medicines.WearAddMedicineActivity"
+            android:exported="false"
+            android:taskAffinity="" />
+        <activity
+            android:name=".activity.Medicines.WearMedicinesActivity"
+            android:exported="false"
+            android:taskAffinity="" />
+        <activity
+            android:name=".activity.WearMainActivity"
+            android:exported="true"
+            android:taskAffinity=""
+            android:theme="@style/Theme.MedicineReminder">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.wearable.standalone"
+            android:value="true" />
+    </application>
+
+</manifest>
